@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactASPLearn", "ReactASPLearn\ReactASPLearn.csproj", "{C94DAB9E-05F6-4B19-A857-B3CE6A2871DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C94DAB9E-05F6-4B19-A857-B3CE6A2871DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C94DAB9E-05F6-4B19-A857-B3CE6A2871DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C94DAB9E-05F6-4B19-A857-B3CE6A2871DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C94DAB9E-05F6-4B19-A857-B3CE6A2871DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E5CFC79A-77B8-438C-8060-A2645F80528F}
+	EndGlobalSection
+EndGlobal
