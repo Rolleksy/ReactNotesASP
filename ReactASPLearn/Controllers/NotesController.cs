@@ -45,7 +45,7 @@ namespace ReactASPLearn.Controllers
             // Update existing note properties
             existingNote.noteTitle = updatedNote.noteTitle;
             existingNote.noteText = updatedNote.noteText;
-
+            existingNote.noteDate = updatedNote.noteDate;
             _dbContext.SaveChanges();
 
             return Ok(new { success = true, message = "Note updated successfully" });
