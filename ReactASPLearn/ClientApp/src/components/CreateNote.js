@@ -1,5 +1,5 @@
 ﻿import React, { Component } from 'react';
-import './CreateNote.module.css';
+
 export class CreateNote extends Component {
     constructor(props) {
         super(props);
