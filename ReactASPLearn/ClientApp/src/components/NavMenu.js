@@ -15,6 +15,7 @@ export class NavMenu extends Component {
     };
   }
 
+  
   toggleNavbar () {
     this.setState({
       collapsed: !this.state.collapsed
@@ -24,8 +25,8 @@ export class NavMenu extends Component {
   render() {
     return (
       <header>
-        <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3" container light>
-          <NavbarBrand tag={Link} to="/">ReactASPLearn</NavbarBrand>
+            <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3" container light>
+                <NavbarBrand tag={Link} to="/"><span className="logo">Notepad</span></NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
           <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
             <ul className="navbar-nav flex-grow">
@@ -35,9 +36,10 @@ export class NavMenu extends Component {
               <NavItem>
                 <NavLink tag={Link} className="text-dark" to="/createnote">Create Note</NavLink>
               </NavItem>
-                        <NavItem>
-                            <NavLink tag={Link} className="text-dark" to="/listnotes">List your notes</NavLink>
+              <NavItem>
+                <NavLink tag={Link} className="text-dark" to="/listnotes">List your notes</NavLink>
                         </NavItem>
+                        
             </ul>
           </Collapse>
         </Navbar>

@@ -4,6 +4,7 @@ body {
     background-image: linear-gradient(30deg, #f7ce45 12%, transparent 12.5%, transparent 87%, #f7ce45 87.5%, #f7ce45), linear-gradient(150deg, #f7ce45 12%, transparent 12.5%, transparent 87%, #f7ce45 87.5%, #f7ce45), linear-gradient(30deg, #f7ce45 12%, transparent 12.5%, transparent 87%, #f7ce45 87.5%, #f7ce45), linear-gradient(150deg, #f7ce45 12%, transparent 12.5%, transparent 87%, #f7ce45 87.5%, #f7ce45), linear-gradient(60deg, #f7ce4577 25%, transparent 25.5%, transparent 75%, #f7ce4577 75%, #f7ce4577), linear-gradient(60deg, #f7ce4577 25%, transparent 25.5%, transparent 75%, #f7ce4577 75%, #f7ce4577);
     background-size: 28px 49px;
     background-position: 0 0, 0 0, 14px 25px, 14px 25px, 0 0, 14px 25px;
+    overflow: hidden;
 }
 
 nav {
@@ -19,6 +20,12 @@ a {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #e9c000;
 }
 
+.logo {
+    font-weight: 900;
+    font-family: 'Book Antiqua';
+    font-size: 2rem;
+    color: #ff9c00;
+}
 
 nav > a {
     color: black;
@@ -88,6 +95,7 @@ code {
     -moz-box-shadow: inset 0px 0px 24px -9px rgba(66, 68, 90, 1);
     box-shadow: inset 0px 0px 24px -9px rgba(66, 68, 90, 1);
     border: none;
+    min-height: 30dvh;
 }
 .addnote-btn {
     border-radius: 0.4rem;
@@ -98,6 +106,7 @@ code {
     -webkit-box-shadow: 0px 0px 5px 0px rgba(66, 68, 90, 1);
     -moz-box-shadow: 0px 0px 5px 0px rgba(66, 68, 90, 1);
     box-shadow: 0px 0px 5px 0px rgba(66, 68, 90, 1);
+    flex-shrink:0;
 }
     .addnote-btn:hover {
         -webkit-box-shadow: inset 0px 0px 5px 0px rgba(66, 68, 90, 1);
@@ -170,13 +179,15 @@ code {
 
 .listnote-btn {
     border-radius: 0.4rem;
-    width: 5dvw;
+    min-width: 5dvw;
     align-self: center;
     background-color: #e9c000;
     border: none;
     -webkit-box-shadow: 0px 0px 5px 0px rgba(66, 68, 90, 1);
     -moz-box-shadow: 0px 0px 5px 0px rgba(66, 68, 90, 1);
     box-shadow: 0px 0px 5px 0px rgba(66, 68, 90, 1);
+    flex-grow: 1;
+    overflow: hidden;
 }
     .listnote-btn:hover {
         -webkit-box-shadow: inset 0px 0px 5px 0px rgba(66, 68, 90, 1);
