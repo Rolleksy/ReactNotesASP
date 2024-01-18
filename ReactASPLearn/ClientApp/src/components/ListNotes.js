@@ -83,14 +83,18 @@ export class ListNotes extends Component {
         const { showModal, editedNoteTitle, editedNoteText } = this.state;
 
         return (
-            <div>
+            <div className="listNotes-container">
+                <div className="list-title">LIST OF YOUR NOTES</div>
                 {/* Wyświetl notatki tutaj */}
                 {this.state.notes.map((note) => (
-                    <div key={note.noteId}>
-                        <p>{note.noteTitle}</p>
-                        <p>{note.noteDate}</p>
-                        <button onClick={() => this.editNote(note.noteId, note.noteTitle, note.noteText, note.noteDate)}>Edit</button>
-                        <button onClick={() => this.deleteNote(note.noteId)}>Delete</button>
+                    <div className="listnote-display" key={note.noteId}>
+                        <p className="listnote-title">{note.noteTitle}</p>
+                        <p className="listnote-date">{note.noteDate}</p>
+                        <div className="listnote-btn-wrapper">
+                            <button className="listnote-btn" onClick={() => this.editNote(note.noteId, note.noteTitle, note.noteText, note.noteDate)}>Edit</button>
+                            <button className="listnote-btn" onClick={() => this.deleteNote(note.noteId)}>Delete</button>
+                        </div>
+                       
                     </div>
                 ))}
                 <Modal
@@ -98,21 +102,28 @@ export class ListNotes extends Component {
                     onRequestClose={this.closeModal}
                     contentLabel="Edit Note Modal"
                 >
-                    <h2>Edit Note</h2>
-                    <label>Title:</label>
-                    <input
-                        type="text"
-                        value={editedNoteTitle}
-                        onChange={(e) => this.setState({ editedNoteTitle: e.target.value })}
-                    />
-                    <label>Text:</label>
-                    <input
-                        type="text"
-                        value={editedNoteText}
-                        onChange={(e) => this.setState({ editedNoteText: e.target.value })}
-                    />
-                    <button onClick={this.saveAndCloseModal}>Save</button>
-                    <button onClick={this.closeModal}>Cancel</button>
+
+                    <div className="note-wrapper" >
+                        <div className="title-container">
+                            <label>EDIT YOUR TITLE:</label>
+                            <input type="text" className="noteTitle" value={editedNoteTitle}
+                                onChange={(e) => this.setState({ editedNoteTitle: e.target.value })}
+                            />
+                        </div>
+                        <div className="note-editor-container">
+                            <label>EDIT YOUR THOUGHTS:</label>
+                            <input type="text" className="noteText" type="text"
+                                value={editedNoteText}
+                                onChange={(e) => this.setState({ editedNoteText: e.target.value })}
+                            />
+                            <div className="modal-btn-wrapper">
+                                <button className="addnote-btn" onClick={this.saveAndCloseModal}>Save</button>
+                                <button className="addnote-btn" onClick={this.closeModal}>Cancel</button>
+                            </div>
+                           
+                        </div>
+                    </div>
+                   
                 </Modal>
             </div>
         );
