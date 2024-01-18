@@ -4,11 +4,16 @@ a {
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #e9c000;
+}
+
+
+nav > a {
+    color: black;
 }
 
 code {
-  color: #E01A76;
+  color: #ff9c00;
 }
 
 .btn-primary {
@@ -16,3 +21,75 @@ code {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+
+/*
+    Note Create component
+*/
+
+.note-wrapper {
+    height: 90dvh;
+    border: 1px solid #ebebeb;
+    border-radius: 1rem;
+    font-family: 'Segoe UI Symbol';
+    -webkit-box-shadow: 0px 0px 24px -9px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 24px -9px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 24px -9px rgba(66, 68, 90, 1);
+}
+.title-container {
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-around;
+    padding: 1rem;
+    gap: 15px;
+    background: #ebebeb;
+    border-radius: 1rem 1rem 0 0 ;
+}
+    .title-container input {
+        flex: 2;
+        border-radius: 0.4rem;
+        text-align: center;
+        font-weight: 900;
+        border: none;
+        -webkit-box-shadow: 0px 0px 24px -14px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 0px 0px 24px -14px rgba(0, 0, 0, 1);
+        box-shadow: 0px 0px 24px -14px rgba(0, 0, 0, 1);
+    }
+.noteTitle {
+    
+}
+.note-editor-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 15px;
+    height: 92dvh;
+    align-items:center;
+    
+}
+
+
+.noteText {
+    padding: 1rem 1rem 67dvh 1rem;
+    border-radius: 0.5rem;
+    width: 60dvw;
+    -webkit-box-shadow: inset 0px 0px 24px -9px rgba(66, 68, 90, 1);
+    -moz-box-shadow: inset 0px 0px 24px -9px rgba(66, 68, 90, 1);
+    box-shadow: inset 0px 0px 24px -9px rgba(66, 68, 90, 1);
+    border: none;
+}
+.addnote-btn {
+    border-radius: 0.4rem;
+    width: 10dvw;
+    align-self: center;
+    background-color: #e9c000;
+    border: none;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 5px 0px rgba(66, 68, 90, 1);
+}
+    .addnote-btn:hover {
+        -webkit-box-shadow: inset 0px 0px 5px 0px rgba(66, 68, 90, 1);
+        -moz-box-shadow: inset 0px 0px 5px 0px rgba(66, 68, 90, 1);
+        box-shadow: inset 0px 0px 5px 0px rgba(66, 68, 90, 1);
+        background-color: #d7b101
+    }

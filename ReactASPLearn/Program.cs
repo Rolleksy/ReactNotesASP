@@ -17,8 +17,8 @@ builder.Services.AddCors(options =>
         builder.WithOrigins("http://localhost:5209", "https://localhost:44414"/*, "https://localhost:7186"*/) // Zaktualizuj ten adres URL do adresu swojej aplikacji React
                 .AllowAnyMethod()
                 .AllowAnyHeader()
-                /*.AllowCredentials()*/
-                .AllowAnyOrigin();
+                .AllowCredentials();
+                
     });
 });
 

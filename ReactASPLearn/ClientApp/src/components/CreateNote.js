@@ -1,5 +1,5 @@
 ﻿import React, { Component } from 'react';
-
+import './CreateNote.module.css';
 export class CreateNote extends Component {
     constructor(props) {
         super(props);
@@ -50,15 +50,18 @@ export class CreateNote extends Component {
     render() {
         return (
             <>
-                <div className="title-container">
-                    <label>Title your note:</label>
-                    <input type="text" className="noteTitle" onChange={this.handleTitleChange} />
+                <div className="note-wrapper" >
+                    <div className="title-container">
+                        <label>TITLE YOUR NOTE:</label>
+                        <input type="text" className="noteTitle" onChange={this.handleTitleChange} />
+                    </div>
+                    <div className="note-editor-container">
+                        <label>TYPE YOUR THOUGHTS:</label>
+                        <input type="text" className="noteText" onChange={this.handleTextChange} />
+                        <button className="addnote-btn" onClick={this.AddNote}>ADD NOTE</button>
+                    </div>
                 </div>
-                <div className="note-editor-container">
-                    <label>Type your note here:</label>
-                    <input type="text" className="noteText" onChange={this.handleTextChange} />
-                    <button className="addnote-btn" onClick={this.AddNote}>Add note</button>
-                </div>
+                
             </>
         );
     }
